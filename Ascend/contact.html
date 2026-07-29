@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ascend - Contact Us</title>
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/contact.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  </head>
+
+  <body>
+    <header class="navbar">
+      <!-- Website Header -->
+      <nav class="nav-container">
+        <a href="home.html" class="nav-logo">
+          <img src="images/Ascend.svg" alt="Logo" class="logo-icon" />
+        </a>
+
+        <!-- Hamburger Menu Icon (Mobile View) -->
+        <div class="hamburger" id="hamburger">&#9776;</div>
+
+        <div class="nav-spacer" id="nav-links">
+          <!-- Navigation Links -->
+          <ul class="nav-links">
+            <li><a href="home.html" class="underline">Home</a></li>
+            <li><a href="first-timer.html" class="underline">First Timer?</a></li>
+            <li><a href="pricing.html" class="underline">Pricing</a></li>
+            <li><a href="classes.html" class="underline">Classes</a></li>
+            <li><a href="contact.html" class="underline">Contact us</a></li>
+            <li><a href="staff.html" class="underline">Meet Our Staff</a></li>
+          </ul>
+          <ul class="nav-right">
+            <li id="login" class="login-button">Login / Sign Up</li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div class="container">
+        <!-- Contact Details Section -->
+        <div class="left">
+          <!-- First Timer -->
+          <section>
+            <h3>Are you new to <strong>Ascend </strong>?</h3>
+            <p>Check out our <a href="first-timer.html">First Timer?</a> page.</p>
+          </section>
+
+          <hr class="divider" />
+
+          <!-- Location -->
+          <section>
+            <h3>Find a location</h3>
+            <p>To get in touch with our outlets, visit our <a href="home.html#map-anchor">location</a>.</p>
+          </section>
+
+          <hr class="divider" />
+
+          <!-- Social Media -->
+          <section>
+            <h3>Connect with us on social media</h3>
+            <p>
+              <a href = "https://www.facebook.com/batuuclimbinggym/"><i class="fab fa-facebook social-icon"></i></a>
+              <a href = "https://www.instagram.com/batuuclimbing/?hl=en"><i class="fab fa-instagram social-icon"></i></a>
+              <a href = "https://www.whatsapp.com/"><i class="fab fa-whatsapp social-icon"></i></a>
+            </p>
+          </section>
+
+          <hr class="divider" />
+          
+          <!-- Business Information -->
+          <section>
+            <h3>Business information</h3>
+            <p style = "line-height: 2;">
+              <strong>Email:</strong> <a href="mailto:climb@ascend.com">climb@ascend.com</a><br />
+              <strong>Phone:</strong> <a href="tel:+6012 322 4220">+6012 322 4220</a><br />
+              <br>Ascend, Lot 1.069, Level 1, Jaya One,<br>
+                72A, Jln Profesor Diraja Ungku Aziz, Pjs 13,<br>
+                46200 Petaling Jaya, Selangor,<br>
+                Malaysia
+            </p>
+          </section>
+
+          <hr class="divider" />
+        </div>
+
+        <!-- Contact Form -->
+        <div class="right">
+          <h2>What can we help you with?</h2>
+          <form id="contactForm">
+            <label for="name">Name</label>
+            <input id="name" type="text" name="name" />
+
+            <label for="email">Email address</label>
+            <input id="email" type="email" name="email" />
+
+            <label for="mobile">Mobile number</label>
+            <input id="mobile" type="tel" name="mobile" placeholder="+60" />
+
+            <label for="subject">Subject</label>
+            <select id="subject" name="subject">
+              <option value="general">General</option>
+              <option value="membership">Membership</option>
+              <option value="feedback">Feedback</option>
+              <option value="other">Other</option>
+            </select>
+
+            <label for="description">Description</label>
+            <textarea id="description" rows="4" name="description"></textarea>
+
+            <button type="submit" class="submit-btn">Submit</button>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <button id="scrollToTopBtn">↑</button>
+      <div class="gridfooter">
+        <div id="footer-logo"><img src="images/ascend_inverted.svg" alt="logo" width="110px"></div>
+
+        <div id="footer-opening-time">
+          <p>Open Daily</p>
+          <p style="font-size: 20px;">9.00 am - 11.00 pm</p>
+        </div>
+
+        <div id="footer-contact">
+          <p><strong>Contact Us:</strong><br>+6012 322 4220</p>
+        </div>
+
+        <div id="footer-address">
+          <p>Lot 1.069, Level 1, Jaya One,<br>
+          72A, Jln Profesor Diraja Ungku Aziz, Pjs 13,<br>
+          46200 Petaling Jaya, Selangor,<br>
+          Malaysia</p>
+        </div>
+        
+        <div id="footer-social">
+          <a href = "https://www.facebook.com/batuuclimbinggym/"><i class="fab fa-facebook social-icon-footer"></i></a>
+          <a href = "https://www.instagram.com/batuuclimbing/?hl=en"><i class="fab fa-instagram social-icon-footer"></i></a>
+          <a href = "https://www.whatsapp.com/"><i class="fab fa-whatsapp social-icon-footer"></i></a>
+        </div> 
+
+        <div id="footer-terms"><p>Terms & Conditions Apply</p></div>
+
+        <div id="footer-copyright"><p>&copy Ascend Sdn. Bhd. </p></div>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,369 @@
+body {
+  margin: 0;
+  font-family: 'Gotham', 'Poppins', sans-serif;
+  background-color: #1c3434;
+  overflow-x: hidden;
+}
+
+/* Hero Section */
+.hero-image {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-image: url("../images/home.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero-image::before {
+  content: "";
+  position: absolute;
+  top: 90px;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5); /* tint */
+  z-index: 1;
+}
+
+.hero-text {
+  color: white;
+  font-size: 4rem;
+  position: relative;
+  z-index: 2; /* Ensures it's above the overlay */
+  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.5);
+  margin-bottom: 0;
+}
+
+h2.hero-text {
+  font-size: 1.5rem; 
+  font-weight: lighter;
+}
+
+/* Content Wrapper */
+.bigbox {
+  background-image: url("../images/home.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+/* Introduction Section */
+.box-row {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  justify-content: center;
+  width: 100%;
+  padding: 0px;
+  gap: 0px;
+  margin-bottom: 0px;
+  box-sizing: border-box;
+}
+
+.image-side {
+flex: 1 1 700px;
+display: block;
+overflow: hidden;
+height:550px;
+}
+
+.image-side img {
+display: block;
+width: 100%;
+min-height: 400px;
+object-fit: cover;
+height:550px;
+}
+
+.centerbutton {
+flex: 1 1 700px;
+margin: 0;
+padding: 20px;
+border: none;
+background-color: #844cac;
+color: #dccbbb;
+font-size: 2rem;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+position: relative;
+cursor: pointer;
+box-sizing: border-box;
+height:550px;
+}
+
+.centerbutton .fade-text {
+opacity: 0;
+transition: opacity 0.6s ease, transform 0.6s ease;
+transform: translateY(20px);
+font-size: 1.2rem;
+line-height: 2;
+padding: 0 30px;
+text-align: justify;
+}
+
+.learn-more-button {
+  background-color: #844cac;
+  text-decoration: none;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-size: 16px;
+  width: 11%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  text-align: center;
+}
+
+.learn-more-button:hover {
+  color: #844cac;
+  background-color: #ffffff;
+}
+
+/* Introduction Section Animation */
+.scroll-left {
+opacity: 0;
+transform: translateX(-80px);
+transition: all 0.6s ease-out;
+}
+.scroll-right {
+opacity: 0;
+transform: translateX(80px);
+transition: all 0.6s ease-out;
+}
+.scroll-visible {
+opacity: 1;
+transform: translateX(0);
+}
+.scroll-visible .fade-text {
+opacity: 1;
+transform: translateY(0);
+}
+
+/* Google Map Section */
+.map-section {
+  /* Background with climbing texture*/
+  background-image: url("../images/jayaone.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  padding: 80px 20px;
+  color: #fff;
+  text-align: center;
+  overflow: hidden;
+
+  /* Animation */
+  opacity: 0;
+  transform: translateY(80px);
+  transition: all 0.7s ease;
+}
+
+.map-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5); /* dark overlay */
+  z-index: 0;
+}
+
+.map-content {
+  position: relative;
+  z-index: 1;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.map-overlay-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100px;
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 0;
+  border-radius: 10px;
+  z-index: 2;
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  pointer-events: auto;
+}
+
+.map-overlay-image:hover {
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(1.1); 
+}
+
+/* Pin Animation Section */
+.pin-icon {
+  width:25px;
+  vertical-align: middle;
+  animation: floatPin 2.4s ease-in-out infinite;
+  margin-right: 10px;
+}
+
+@keyframes floatPin {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+.map-frame-container {
+  margin-top: 30px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+}
+
+.map-frame-container iframe {
+  width: 100%;
+  height: 450px;
+  border: none;
+}
+
+/* Scroll Animation Section */
+.scroll-visible.map-section {
+  opacity: 1;
+  transform: translateY(0);
+}
+.scroll-visible .map-overlay-image {
+  transform: translate(-50%,-50%);
+  opacity: 0.9;
+}
+
+.hover-container:hover .map-overlay-image {
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+.gallery-header {
+  width: 100%;
+  height: 110px;
+  background-color: #dccbbb; /* beige */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1.2s ease, transform 1.2s ease;
+}
+
+.gallery-header h1 {
+  color: #1c3434; /* green */
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+.gallery-header.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive Media Queries */
+
+/* For tablets (max-width: 1025px) */
+@media (max-width: 1025px) {
+  .hero-text {
+    font-size: 3.2rem;
+  }
+  
+  h2.hero-text {
+    font-size: 1.2rem;
+  }
+
+  .box-row {
+    flex-direction: column;
+  }
+
+  .image-side,
+  .centerbutton {
+    flex: 1 1 100%;
+    height: 400px;
+  }
+
+  .centerbutton {
+    font-size: 1.5rem;
+    padding-bottom: 40px;
+  }
+
+  .centerbutton .fade-text {
+    font-size: 1rem;
+    padding-left: 20px;
+  }
+
+  .map-frame-container iframe {
+    height: 350px;
+  }
+
+  .view-page-button {
+    width: 10%;
+    font-size: 14px;
+  }
+
+  .gallery-header h1 {
+    font-size: 2rem;
+  }
+}
+
+/* For mobile devices (max-width: 600px) */
+@media (max-width: 600px) {
+  .hero-image {
+    height: 70vh;
+    background-position: center;
+  }
+
+  .hero-image::before {
+    height: 70vh;
+    top: 65px;
+  }
+
+  .hero-text {
+    font-size: 2.8rem;
+  }
+
+  h2.hero-text {
+    font-size: 1.1rem;
+    padding: 0 10px;
+  }
+
+  .image-side,
+  .centerbutton {
+    height: 300px;
+  }
+
+  .centerbutton {
+    font-size: 1.2rem;
+    padding: 15px;
+    padding-bottom: 40px;
+  }
+
+  .centerbutton .fade-text {
+    font-size: 0.9rem;
+    padding-left: 15px;
+    line-height: 1.8;
+    text-align: center;
+    padding-right:30px;
+  }
+
+  .map-frame-container iframe {
+    height: 250px;
+  }
+
+  .view-page-button {
+    width: 20%;
+    font-size: 13px;
+  }
+
+  .gallery-header {
+    height: 80px;
+  }
+
+  .gallery-header h1 {
+    font-size: 1.8rem;
+  }
+}

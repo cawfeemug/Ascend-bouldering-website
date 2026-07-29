@@ -1,0 +1,136 @@
+body {
+  margin: 0;
+  font-family: 'Gotham', 'Poppins', sans-serif;
+  background-color: #1c3434;
+  color: #1c3434;
+}
+
+/* Content Wrapper */
+.container {
+  max-width: 1000px;
+  margin: 50px auto;
+  background-color: #dccbbb;
+  display: flex;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  margin: 80px auto;
+}
+
+/* Section Wrapper */
+.left, .right {
+  flex: 1;
+  padding: 20px;
+}
+
+/* Contact Details Section */
+a {
+  color: #844cac;
+  text-decoration: none; 
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.left section {
+  margin-bottom: 30px;
+}
+
+.social-icon {
+  color: #844cac;
+  font-size: 20px;
+  margin-right: 10px;
+  transition: color 0.3s ease;
+}   
+
+.social-icon:hover {
+  color: #542972; /* darker purple on hover */
+}
+
+.divider {
+  border: 1px solid #1c3434;
+  margin: 30px 0 30px;
+}
+
+/* Contact Form */
+input, textarea, select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 8px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.submit-btn {
+  background-color: #844cac;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+  background-color: white;
+  color: #844cac;
+}
+
+/* Responsive Media Queries */
+
+/* For tablets (max-width: 1025px) */
+@media (max-width: 1025px) {
+  .container {
+    flex-direction: column;
+    padding: 30px;
+    margin: 60px 20px;
+  }
+
+  .submit-btn {
+    width: 100%;
+  }
+
+  input, textarea, select {
+    font-size: 15px;
+  }
+}
+ 
+/* For mobile devices (max-width: 600px) */
+@media (max-width: 600px) {
+  .container {
+    padding: 20px;
+    margin: 40px 10px;
+  }
+
+  .left, .right {
+    padding: 10px;
+  }
+
+  .left section {
+    margin-bottom: 20px;
+    text-align: left;
+    justify-content: left;
+  }
+
+  input, textarea, select {
+    width: 95%;
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .submit-btn {
+    font-size: 14px;
+    padding: 10px;
+    width: 100%;
+  }
+
+  .social-icon {
+    font-size: 22px;
+    margin-right: 12px;
+    display: inline-block;
+  }
+}
